@@ -1,0 +1,26 @@
+:root {
+    --back-color-def: #343535;
+    --back-color-alt: #eeedeb;
+    --back-color-aux: ;
+    
+    --text-color-def: #eeedeb;
+    --text-color-alt: #343535;
+    --text-color-aux:;
+}
+
+@font-face {
+    font-family: 'Agave';
+    src: url('../../assets/fonts/agave/agave.ttf');
+}
+@font-face {
+    font-family: 'Florest';
+    src: url('../../assets/fonts/florest/florest.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Agave';
+}
+
+body {}
