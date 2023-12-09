@@ -1,0 +1,33 @@
+/* header | head - component */
+.head {
+    & .logo {
+        position: relative;
+        width: 60px;
+        height: 50px;
+        overflow: hidden;
+
+        & img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    & .mail {
+        display: flex;
+        flex-direction: column;
+
+        & .label {
+            font-weight: bold;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            text-align: end;
+        }
+        & .email {
+            font-size: 10px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            color: var(--text-color-def);
+        }
+    }
+}

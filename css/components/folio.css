@@ -1,0 +1,16 @@
+.folio {
+    display: flex;
+
+    & .folio-grid {
+        position: relative;
+        
+
+        & .area-apply {
+            position: relative;
+            width: 290px;
+            height: 190px;
+            background: blue;
+            margin-right: 5px;
+        }
+    }
+}

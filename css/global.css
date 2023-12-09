@@ -1,26 +1,100 @@
 :root {
-    --back-color-def: #343535;
+    --back-color-def: rgba(53, 54, 54, .5);
     --back-color-alt: #eeedeb;
     --back-color-aux: ;
     
     --text-color-def: #eeedeb;
     --text-color-alt: #343535;
-    --text-color-aux:;
+    --text-color-aux: ;
+    
+    --ff-def: 'Agave';
+    --ff-alt: 'Forest';
+}
+
+/* default class's */
+.jca {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.jcb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.jcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @font-face {
     font-family: 'Agave';
-    src: url('../../assets/fonts/agave/agave.ttf');
+    src: url('../assets/fonts/Agave.otf');
 }
 @font-face {
-    font-family: 'Florest';
-    src: url('../../assets/fonts/florest/florest.ttf');
+    font-family: 'Forest';
+    src: url('../assets/fonts/forest.ttf');
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Agave';
+    font-family: var(--ff-def);
 }
 
-body {}
+body {
+    background: url('../assets/imgs/cover.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .grid {
+        position: relative;
+        overflow: hidden;
+        width: calc(100% - 18%);
+        height: calc(100vh - 10vh);
+        background: var(--back-color-def);
+        backdrop-filter: blur(15px);
+        padding: 20px;
+    }
+}
+
+
+/* rorot | home - component */
+.root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% / 2);
+    height: 100%;
+
+    & .home, & .about, & .folio, & .contact {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+
+        & .title {
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-size: 32px;
+            &::before {
+                position: absolute;
+                content: '';
+                bottom: -5px;
+                width: 65px;
+                height: 3px;
+                background: #000;
+            }
+        }
+    }
+}

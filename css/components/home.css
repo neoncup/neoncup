@@ -1,0 +1,70 @@
+.home {
+    display: flex;
+    display: none; /* remove this*/
+
+    &  h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: var(--text-color-def);
+        letter-spacing: 2px;
+        font-weight: normal;
+    }
+    & label {
+        position: relative;
+        font-size: 5em;
+        font-weight: 600;
+        font-family: var(--ff-alt);
+        color: var(--text-color-alt);
+        margin-bottom: 50px;
+        
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100px;
+            height: 5px;
+            background: var(--text-color-alt);
+            bottom: -10px;
+        }
+    }
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: var(--back-color-alt);
+        transition: background .5s ease-in-out;
+        transition: border .5s ease-in-out;
+        transition: color .5s ease-in-out;
+        border-radius: 8px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+
+        &:hover {
+            background: transparent;
+            border: 1px solid var(--back-color-alt);
+            color: var(--text-color-def);
+        }
+    }
+    & .s-media {
+        position: absolute;
+        margin-top: 80%;
+
+        & .fab {
+            font-size: 22px;
+            margin-right: 20px;
+            color: var(--text-color-alt);
+            font-weight: bold;
+            cursor: pointer;
+            
+            &:hover {
+                color: var(--text-color-def);
+            }
+        }
+    }
+}

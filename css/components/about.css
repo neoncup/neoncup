@@ -1,0 +1,13 @@
+.about {
+    display: flex;
+    display: none; /* remove this*/
+
+    & .text {
+        & .paragraph {
+            color: var(--text-color-def);
+            letter-spacing: 2px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+    }
+}
