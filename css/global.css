@@ -1,12 +1,12 @@
 :root {
-    --back-color-def: rgba(53, 54, 54, .5);
+    --back-color-def: #202020; /*rgba(53, 54, 54, .5);*/
     --back-color-alt: #eeedeb;
     --back-color-aux: ;
-    
+
     --text-color-def: #eeedeb;
     --text-color-alt: #343535;
-    --text-color-aux: ;
-    
+    --text-color-aux: #FF0729;
+
     --ff-def: 'Agave';
     --ff-alt: 'Forest';
 }
@@ -55,15 +55,13 @@ body {
     & .grid {
         position: relative;
         overflow: hidden;
-        width: calc(100% - 18%);
-        height: calc(100vh - 10vh);
+        border-radius: 10px;
+        width: calc(100% - 24.5%);
+        height: calc(100vh - 25vh);
+        border: 1px solid var(--back-color-alt);
         background: var(--back-color-def);
         backdrop-filter: blur(15px);
         padding: 20px;
-    }
-
-    & .state {
-        display: none;
     }
 }
 

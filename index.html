@@ -13,27 +13,17 @@
     <link rel="stylesheet" href="css/components/head.css">
     <link rel="stylesheet" href="css/components/home.css">
     <link rel="stylesheet" href="css/components/about.css">
+    <link rel="stylesheet" href="css/components/servics.css">
     <link rel="stylesheet" href="css/components/folio.css">
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loading.min.js"></script>
 
     <title>Meireles Fernando</title>
 </head>
-<body>
-    <!-- loaded -->
-    <div class="preload">
-        <div class="content">
-            <div class="logo">
-                <img src="assets/imgs/MeLogDef.png" alt="">
-            </div>
-            <div class="loading">
-                <div class="span"></div>
-                <div class="load"><div class="mouse"></div></div>
-                <div class="span"></div>
-            </div>
-        </div>
-    </div>
-
+<body onload="preloadFunction()">
     <!-- components -->
-    <div class="grid state">
+    <div class="grid">
         <!-- header | head -->
         <header class="head jcb">
             <div class="logo"><img src="assets/imgs/MeLogDef.png" alt=""></div>
@@ -45,17 +35,37 @@
 
         <!--root | home | about | folio | contact -->
         <div class="root">
-            <div class="home">
-                <h1>Olá, Eu sou Meireles Fernando!</h1>
-                <label>Design / Dev</label>
-                <button>baixar cv</button>
-                <div class="s-media">
-                    <div class="content">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-x-twitter"></i>
+            <!-- Preloaded -->
+            <div class="preload">
+                <div class="content">
+                    <div class="logo">
+                        <img src="assets/imgs/MeLogDef.png" alt="">
+                    </div>
+                    <div class="loading">
+                        <div class="span"></div>
+                        <div class="load"><div class="mouse"></div></div>
+                        <div class="span"></div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- HOME -->
+            <div class="home">
+                <div class="left front">
+                    <h2>Olá! Eu sou.</h2>
+                    <h1>Meireles Fernando</h1>
+                    <label><span><i class="fa fa-chevron"></i></span>Desigin / Desenvolvedor</label>
+                    
+                    <div class="buttons">
+                        <div class="s-media">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-x-twitter"></i>
+                        </div>
+                        <button>baixar cv</button>
+                    </div>
+                </div>
+                <div class="right back"></div>
             </div>
 
             <div class="about">
@@ -69,16 +79,58 @@
                 </div>
             </div>
 
+            <div class="servics">
+                <div class="title">serviços</div>
+
+                <div class="servics-grid">
+                    <div class="content">
+                        <div class="div-apply">
+                            <div class="content">
+                                <span class="icone"><i class="fa fa-laptop"></i></span>
+                                <h2 class="servics-title">desenvolvimento web</h2>
+                                <p class="text"></p>
+                            </div>
+                        </div>
+                        <div class="div-apply">
+                            <div class="content">
+                                <span class="icone"><i class="fa fa-laptop"></i></span>
+                                <h2 class="servics-title">desenvolvimento web</h2>
+                                <p class="text"></p>
+                            </div>
+                        </div>
+                        <div class="div-apply">
+                            <div class="content">
+                                <span class="icone"><i class="fa fa-laptop"></i></span>
+                                <h2 class="servics-title">desenvolvimento web</h2>
+                                <p class="text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="folio">
                 <label class="title">portifolio</label>
 
                 <div class="folio-grid">
-                    <div class="area-apply"></div>
-                    <div class="area-apply"></div>
-                    <div class="area-apply"></div>
-                    <div class="area-apply"></div>
+                    <div class="content">
+                        <div class="area-apply">
+                            <div class="items"></div>
+                        </div>
+                        <div class="area-apply">
+                            <div class="items"></div>
+                        </div>
+                        <div class="area-apply">
+                            <div class="items"></div>
+                        </div>
+                        <div class="area-apply">
+                            <div class="items"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="contact"></div>
         </div>
     </div>
 </body>

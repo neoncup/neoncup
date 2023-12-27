@@ -1,5 +1,7 @@
 /* header | head - component */
 .head {
+    display: none;
+
     & .logo {
         position: relative;
         width: 60px;
