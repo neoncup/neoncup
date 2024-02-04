@@ -1,6 +1,6 @@
 .servics {
+    display: none; /* remove this */
     display: flex;
-    display: none;
 
     & .servics-grid {
         position: relative;

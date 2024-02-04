@@ -18,6 +18,7 @@
     <!-- js -->
     <script src="js/jquery.min.js"></script>
     <script src="js/loading.min.js"></script>
+    <script src="js/components.min.js"></script>
 
     <title>Meireles Fernando</title>
 </head>
@@ -67,18 +68,86 @@
                 </div>
                 <div class="right back"></div>
             </div>
-
+            <!-- ABOUT -->
             <div class="about">
-                <label class="title">sobre me</label>
-                <div class="text">
-                    <p class="paragraph">
-                        Meireles, design e desenvolvidor junior residente em Angola.
-                        Trabalha como freelance UX/UI e design grafico. Gosta de fazer interatividades fantasticas e
-                        apaixonado por inovações, e lindos design.
-                    </p>
+                <div class="lside">
+                    <div class="text"><!-- TEXT ABOUT ME -->
+                        <label class="title">sobre me</label>
+                        <p class="paragraph">
+                            Meireles, design e desenvolvidor junior residente em Angola.
+                            Trabalha como freelance UX/UI e design grafico. Gosta de fazer interatividades fantasticas e
+                            apaixonado por inovações, e lindos design.
+                        </p>
+                    </div>
+                    <div class="ilove"><!-- I LOVE -->
+                        <label class="title">eu gosto</label>
+                        <ul class="likes">
+                            <li class="like">
+                                <span class="radio"></span>Musica
+                            </li>
+                            <li class="like">
+                                <span class="radio"></span>Fotografia
+                            </li>
+                            <li class="like">
+                                <span class="radio"></span>Manhwas | HQs
+                            </li>
+                            <li class="like">
+                                <span class="radio"></span>Anime
+                            </li>
+                            <li class="like">
+                                <span class="radio"></span>Fitness | Volleyboll | Workout
+                            </li>
+                            <li class="like">
+                                <span class="radio"></span>Tecnologias | Nóticias
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="onweb"><!-- ONWEB -->
+                        <label class="title">na internet</label>
+                        <ul class="smedia">
+                            <li>
+                                <i class="fab fa-facebook"></i>
+                                <span onmouseover="onwebFunction(0)">
+                                    neoncup<span class="link">.facebook</span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fab fa-github"></i>
+                                <span onmouseover="onwebFunction(1)">
+                                    neoncup<span class="link">.github</span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fab fa-x-twitter"></i>
+                                <span onmouseover="onwebFunction(2)">
+                                    neoncup<span class="link">.twitter-x</span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fab fa-instagram"></i>
+                                <span onmouseover="onwebFunction(3)">
+                                    neoncup<span class="link">.instagram</span>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fab fa-pinterest"></i>
+                                <span onmouseover="onwebFunction(4)">
+                                    neoncup<span class="link">.pinterst</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rside">
+                    <div class="about-bar">
+                        <i onclick="aboutFunction(0)" class="fa fa-circle-info"></i>
+                        <i onclick="aboutFunction(1)" class="fa fa-heart"></i>
+                        <i onclick="aboutFunction(2)" class="fa fa-globe"></i>
+                    </div>
                 </div>
             </div>
-
+            <!-- SERVICS -->
             <div class="servics">
                 <div class="title">serviços</div>
 
@@ -108,7 +177,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- FOLIO -->
             <div class="folio">
                 <label class="title">portifolio</label>
 
@@ -129,7 +198,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- CONTACT -->
             <div class="contact"></div>
         </div>
     </div>

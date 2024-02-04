@@ -1,5 +1,5 @@
 .home {
-    display: none; /* remove this*/
+    display: none; /* remove this */
     display: flex;
 
     & .left, & .right {
@@ -13,7 +13,7 @@
             letter-spacing: 2.5px;
         }
         & h2 {
-            font-size: 12px;
+            font-size: 12px; 
             color: var(--text-color-def);
         }
         & h1 {

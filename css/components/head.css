@@ -1,6 +1,7 @@
 /* header | head - component */
 .head {
-    display: none;
+    display: flex;
+    display: none; /* remove this */
 
     & .logo {
         position: relative;
