@@ -12,7 +12,7 @@ function App() {
     <div className = "App" >
       <GlobalStyle />
       <LoadEvents seconds = {8} openView = { openView } />
-      <ViewPort value = { viwVisible } />
+      <ViewPort value = { viewVisible } />
     </div>
   )
 }
