@@ -1,21 +1,30 @@
 import { Navbar } from './styled'
+import Switch from 'react-switch'
+
 import { useNavigate } from 'react-router-dom'
-import { BsFolder, BsLayersHalf, BsHouse, BsFillPinFill } from 'react-icons/bs'
-import { FaHandshake } from 'react-icons/fa'
-
-import logotipo from '../../assets/MYLOGO.png'
+import { useContext } from 'react'
 
 
+import { BsMoonFill, BsSunFill, BsGithub, BsList } from 'react-icons/bs'
 
-const NavBar: React.FC = () => {
+import logotipo from '../../assets/Logo-w.ico'
+import { ThemeContext } from 'styled-components'
+
+interface NavbarProps {
+    switchTheme(): void;
+}
+
+
+const NavBar: React.FC <NavbarProps> = ({ switchTheme }) => {
+    const { title } = useContext(ThemeContext)
     const navigate = useNavigate();
 
     /* my routes functions */
     const buttonHome = () => { navigate('/') }
-    const buttonFolio = () => { navigate('/portifolio') }
-    const buttonServics = () => { navigate('/serviços') }
-    const buttonContacts = () => { navigate('/contactos') }
     const buttonAbout = () => { navigate('/sobre') }
+    const buttonFolio = () => { navigate('/portifolio') }
+    const buttonThumbrs = () => { navigate('/serviços') }
+    const buttonSource = () => { navigate('/contactos') }
 
     /* */
     const enableButton = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -37,34 +46,48 @@ const NavBar: React.FC = () => {
         <Navbar>
             <div className = "contain">
                 <div>
-                    <button className = "button" onClick = { (event) =>{ enableButton(event); buttonHome () } }>
+                    <button className = "btn_link" onClick = { (event) =>{ enableButton(event); buttonHome () } }>
                         <div className = "actived"></div>
-                        <span><BsHouse /></span>
+                        <div className = "logo" id="m"><img src = { logotipo } /></div>
+                        <span>eireles Fernando</span>
                     </button>
-                    <button className = "button" onClick = { (event) =>{ enableButton(event); buttonFolio () } }>
+
+                    <button className = "btn_link" onClick = { (event) =>{ enableButton(event); buttonAbout () } }>
                         <div className = "actived"></div>
-                        <span><BsFolder /></span>
+                        <span>About</span>
                     </button>
-                    <button className = "button" onClick = { (event) =>{ enableButton(event); buttonServics () } }>
+                    <button className = "btn_link" onClick = { (event) =>{ enableButton(event); buttonFolio () } }>
+                        <div className = "actived"></div>
+                        <span>Works</span>
+                    </button>
+                    <button className = "btn_link" onClick = { (event) =>{ enableButton(event); buttonThumbrs () } }>
                         <div className  = "actived"></div>
-                        <span><BsLayersHalf /></span>
+                        <span>Thumbrs</span>
                     </button>
-                    <button className = "button" onClick = { (event) =>{ enableButton(event); buttonContacts () } }>
+                    <button className = "btn_link" onClick = { (event) =>{ enableButton(event); buttonSource () } }>
                         <div className = "actived"></div>
-                        <span><FaHandshake /></span>
+                        <span><BsGithub className = "icon" /> Source</span>
                     </button>
                 </div>
 
                 <div>
-                    <button className = "button" onClick = { (event) =>{ enableButton(event); buttonAbout () } }>
-                        <div className = "actived"></div>
-                        <div className = "logo" id="m"><img src = { logotipo } /></div>
+                    <button className = "switch">
+                        <Switch className = "theme"
+                            onChange={ switchTheme }
+                            checked = { title == 'dark' } 
+                            checkedIcon = { <BsMoonFill className='icon_lua'/> }
+                            uncheckedIcon = {<BsSunFill className='icon_sol'/> }
+                            handleDiameter={2}
+                            width = {40}
+                            height = {40}
+                        />
                     </button>
-                    <button className = "button" onClick = { (event) =>{ enableButton(event); buttonAbout () } }>
+                    <button className = "bars">
                         <div className = "actived"></div>
-                        <span><BsFillPinFill /></span>
+                        <span><BsList className = "humberger"/></span>
                     </button>
                 </div>
+
             </div>
         </Navbar>
     )

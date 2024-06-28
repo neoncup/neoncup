@@ -10,13 +10,14 @@ import Router from '../../pages/RouterFunc'
 
 interface ViewportProps {
     value: boolean;
+    switchTheme: () => void;
 }
 
-const ViewPort: React.FC <ViewportProps> = ({ value }) => {
+const ViewPort: React.FC <ViewportProps> = ({ value, switchTheme }) => {
     return (
         <Viewport style = {{display: value ? 'block' : 'none'}}>
             <div className = "contain">
-                <div className = "navbar"><NavBar /></div>
+                <div className = "navbar"><NavBar switchTheme = {switchTheme} /></div>
                 <div className = "router"><Router /></div>
             </div>
         </Viewport>

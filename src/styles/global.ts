@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
 
     @font-face {
-        font-family: 'Nordic'
+        font-family: 'Nordic';
         src: url( '${Nordic}' );
     }
     @font-face {
@@ -21,8 +21,8 @@ export default createGlobalStyle`
         src: url( '${PoppinsDef}' );
     }
     @font-face {
-        font-family: 'Poppins-alt'
-        src: url( '${PoppinsAlt}' )
+        font-family: 'Poppins-alt';
+        src: url( '${PoppinsAlt}' );
     }
 
     :root {
