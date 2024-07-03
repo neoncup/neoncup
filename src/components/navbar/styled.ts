@@ -3,11 +3,13 @@ import styled from 'styled-components'
 
 
 export const Navbar = styled.div`
-    position: relaive;
+    position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
     height: 80px;
+    background: ${ props => props.theme.colors.back_color_blur };
+    backdrop-filter: blur(15px);
 
     .contain {
         position: relative;
@@ -22,37 +24,96 @@ export const Navbar = styled.div`
             &:nth-child(1) {
                 display: flex;
 
-                .btn_link {
+                .btn_home {
                     background: transparent;
                     border: none;
                     outline: none;
                     font-size: 14pt;
         
-                    &:nth-child(1) {
-                        display: flex;
-                        align-items: center;
-                        height: 40px;
-        
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+    
+                    .logo {
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 5px;
                         img {
-                            width: 50px;
-                            height: 50px;
-                        }
-                        span {
-                            font-size: 12pt;
-                            font-weight: bold;
-                            font-family: 'Metrica';
-                            text-transform: uppercase;
-                            color: ${props => props.theme.colors.text_color_def};
-                            height: 40px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+
+                            &:nth-child(1) {
+                                display: ${ props => props.theme.displays.sol_display };
+                            }
+                            &:nth-child(2) {
+                                display: ${ props => props.theme.displays.lua_display };
+                            }
                         }
                     }
-                    &:nth-child(2), &:nth-child(3),
-                    &:nth-child(4), &:nth-child(5) {
-                        position: absolute;
-                        display: none;
+                    span {
+                        margin-top: 8px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        font-family: 'Metrica';
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: ${props => props.theme.colors.text_color_def};
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                .routes {
+                    position: absolute;
+                    top: 90px;
+                    right: 10px;
+                    width: 190px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    transition: color .3s;
+                    filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, .3))
+                            drop-shadow(4px 4px 4px rgba(0, 0, 0, .2))
+                            drop-shadow(5px 5px 5px rgba(0, 0, 0, .2));
+                    background: ${ props => props.theme.colors.back_color_alt };
+                    color: var(--icon-color);
+                    margin-left: 10px;
+
+                    display: none;
+                    flex-direction: column;
+                    transition: display 3s;
+
+                    .btn_link {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        font-size: 14pt;
+                        text-align: end;
+                        line-height: 30px;
+                        width: 100%;
+                        transition: color .3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                            color: #fff;
+                        }
+
+                        span {
+                            top: 0;
+                            font-size: 12px;
+                            font-family: 'Metrica';
+                            text-transform: uppercase;
+                            letter-spacing: 4.5px;    
+                            padding: 5px;       
+                            border-radius: 5px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             : ;
+                            color: ${props => props.theme.colors.text_color_def};
+                            background: ${ props => props.theme.colors.back_color_alt + 80};
+                        }
+
+                        #git { display: inline-block; }
                     }
                 }
             }
@@ -124,13 +185,16 @@ export const Navbar = styled.div`
                     align-items: center;
                     justify-content: center;
 
+                    
                     .div {
                         position: absolute;
                     }
                     .humberger {
                         margin-top: 8px;
                         color: ${ props => props.theme.colors.text_color_def };
+                        transition: color .3s
                     }
+                    &:hover .humberger { color: #fff; }
                 }
             }
         }

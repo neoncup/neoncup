@@ -12,9 +12,9 @@ function App() {
   const [ viewVisible, setViewVisible ] = useState(false)
   const openView = () => { setViewVisible(true); }
   
-  const [theme, setTheme] = useState (light)
+  const [theme, setTheme] = useState (dark)
   const switchTheme = () => {
-    setTheme(theme.title == 'light' ? dark : light)
+    setTheme(theme.title == 'dark' ? light : dark)
   }
 
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logo from '../../assets/Logo-w.ico'
+import logo from '../../assets/CRAFTZWOLF01.png'
 import { Loading } from './styled'
 
 

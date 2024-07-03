@@ -6,7 +6,8 @@ declare module 'styled-components' {
 
         colors: {
             back_color_def: string;
-            back_color_alt: string;
+            back_color_alt: string; 
+            back_color_blur: string;
 
             text_color_def: string;
             text_color_alt: string;

@@ -25,6 +25,7 @@ export const Loading = styled.div`
             position: relative;
             height: 100px;
             width: 100px;
+            margin-bottom: 20px;
             overflow: hidden;
 
             img {
@@ -36,8 +37,8 @@ export const Loading = styled.div`
 
         .anim {
             position: relative;
-            width: 50px;
-            height: 5px;
+            width: 100px;
+            height: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -49,7 +50,7 @@ export const Loading = styled.div`
                 width: 100%;
                 height: 100%;
                 border-radius: 5px;
-                background: var(--text-color-def);
+                background: #D4D0CC;
                 animation: barAnimated 3s infinite;
             }
         }
