@@ -18,7 +18,7 @@ interface NavbarProps {
 
 
 const NavBar: React.FC <NavbarProps> = ({ switchTheme }) => {
-    const { title } = useContext(ThemeContext)
+    const title = useContext(ThemeContext)
     const navigate = useNavigate();
 
     /* my routes functions */
@@ -90,7 +90,7 @@ const NavBar: React.FC <NavbarProps> = ({ switchTheme }) => {
                     <button className = "switch">
                         <Switch className = "theme"
                             onChange={ switchTheme }
-                            checked = { title == 'dark' } 
+                            checked = { title?.title == 'dark' } 
                             checkedIcon = { <BsMoonFill className='icon_lua'/> }
                             uncheckedIcon = {<BsSunFill className='icon_sol'/> }
                             handleDiameter={2}
@@ -98,6 +98,7 @@ const NavBar: React.FC <NavbarProps> = ({ switchTheme }) => {
                             height = {40}
                         />
                     </button>
+
                     <button className = "bars" onClick = { () => buttonHumburguer () }>
                         <div className = "actived"></div>
                         <span><BsList className = "humberger"/></span>

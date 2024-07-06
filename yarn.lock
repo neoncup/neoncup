@@ -706,6 +706,11 @@
     "@types/babel__core" "^7.20.5"
     react-refresh "^0.14.2"
 
+TagCloud@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/TagCloud/-/TagCloud-2.5.0.tgz#9917b4ee52fe2130d391e7922e45eef7e3f9ca49"
+  integrity sha512-lMr8UCbOLOyP9iKc/lJalpNTm25rjmplbQ20ljw02tyx4ITBxDh4TRBhSpayC6QGjtRtvslUljfr2SGoPOGnXw==
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"

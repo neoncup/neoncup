@@ -1,5 +1,6 @@
 import { Viewport } from './styled'
 import NavBar from '../navbar/NavBar'
+import Sphere from '../../events/animation/SphereAnimation'
 import Router from '../../pages/RouterFunc'
 
 
@@ -18,7 +19,10 @@ const ViewPort: React.FC <ViewportProps> = ({ value, switchTheme }) => {
         <Viewport style = {{display: value ? 'block' : 'none'}}>
             <div className = "contain">
                 <div className = "navbar"><NavBar switchTheme = {switchTheme} /></div>
-                <div className = "router"><Router /></div>
+                <div className = "router">
+                    <Sphere />
+                    <Router />
+                </div>
             </div>
         </Viewport>
     )

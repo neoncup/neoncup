@@ -4,12 +4,13 @@ import styled from 'styled-components'
 
 export const Navbar = styled.div`
     position: fixed;
-    display: flex;
     align-items: center;
+    display: flex;
     width: 100%;
     height: 80px;
     background: ${ props => props.theme.colors.back_color_blur };
     backdrop-filter: blur(15px);
+    z-index: 999;
 
     .contain {
         position: relative;
@@ -91,13 +92,13 @@ export const Navbar = styled.div`
                         outline: none;
                         font-size: 14pt;
                         text-align: end;
-                        line-height: 30px;
+                        line-height: 35px;
                         width: 100%;
-                        transition: color .3s;
+                        transition: border 3s ease-in-out;
                         cursor: pointer;
 
                         &:hover {
-                            text-decoration: underline;
+                            border-bottom: 1px solid ${props => props.theme.colors.text_color_def};
                             color: #fff;
                         }
 

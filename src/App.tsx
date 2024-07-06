@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components'
 
 import dark from './styles/theme/dark'
 import light from './styles/theme/light'
+import usePersistedState from './components/hooks/usePersistedState'
 
 import GlobalStyle from './styles/global'
 import LoadEvents from './events/load/LoadEvents'
@@ -12,7 +13,7 @@ function App() {
   const [ viewVisible, setViewVisible ] = useState(false)
   const openView = () => { setViewVisible(true); }
   
-  const [theme, setTheme] = useState (dark)
+  const [theme, setTheme] = usePersistedState ('theme', dark)
   const switchTheme = () => {
     setTheme(theme.title == 'dark' ? light : dark)
   }
