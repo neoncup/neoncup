@@ -41,7 +41,37 @@ export const Contain = styled.div`
                 color: ${ props => props.theme.colors.text_color_def };
                 &:hover {color: ${ props => props.theme.colors.theme_back_color }}
             }
+
         }
         
+    }
+    .images {
+        position: absolute;
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contain {
+            position: relative;
+            width: 280px;
+            height: 280px;
+
+            .image_1, .image_2 {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                object-fit: cover;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                filter: blur(15px);
+                transition: display .5s;
+            }
+            .image_1 { display: ${props => props.theme.displays.wolf1_display}; }
+            .image_2 { display: ${props => props.theme.displays.wolf2_display}; }
+        }
     }
 `;

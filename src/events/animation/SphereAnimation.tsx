@@ -1,4 +1,6 @@
 import { Contain } from './styled'
+import image_1 from '../../assets/CRAFTZWOLF01.png'
+import image_2 from '../../assets/CRAFTZWOLF02.png'
 
 import { useEffect } from 'react'
 import TagCloud from 'TagCloud'
@@ -27,6 +29,13 @@ const SphereAnimation: React.FC = () => {
                 <div className="sphere_outside">
                     {/*  */}
                     <span className="tagcloud"></span>
+                </div>
+            </div>
+
+            <div className = "images">
+                <div className = "contain">
+                    <img src = { image_1 } className = "image_1"/>
+                    <img src = { image_2 } className = "image_2"/>
                 </div>
             </div>
         </Contain>

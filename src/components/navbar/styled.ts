@@ -78,6 +78,7 @@ export const Navbar = styled.div`
                     filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, .3))
                             drop-shadow(4px 4px 4px rgba(0, 0, 0, .2))
                             drop-shadow(5px 5px 5px rgba(0, 0, 0, .2));
+
                     background: ${ props => props.theme.colors.back_color_alt };
                     color: var(--icon-color);
                     margin-left: 10px;
@@ -118,6 +119,7 @@ export const Navbar = styled.div`
                     }
                 }
             }
+
             &:nth-child(2) {
                 display: flex;
                 
@@ -193,7 +195,7 @@ export const Navbar = styled.div`
                     .humberger {
                         margin-top: 8px;
                         color: ${ props => props.theme.colors.text_color_def };
-                        transition: color .3s
+                        transition: color .3s;
                     }
                     &:hover .humberger { color: #fff; }
                 }

@@ -16,5 +16,8 @@ export default {
     displays: {
         lua_display: 'block',
         sol_display: 'none',
+
+        wolf1_display: 'none',
+        wolf2_display: 'block',
     }
 }

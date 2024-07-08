@@ -19,6 +19,9 @@ declare module 'styled-components' {
         displays: {
             lua_display: string;
             sol_display: string;
+
+            wolf1_display: string,
+            wolf2_display: string,
         }
     }
 }

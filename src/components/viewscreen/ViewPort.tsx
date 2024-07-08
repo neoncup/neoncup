@@ -19,9 +19,9 @@ const ViewPort: React.FC <ViewportProps> = ({ value, switchTheme }) => {
         <Viewport style = {{display: value ? 'block' : 'none'}}>
             <div className = "contain">
                 <div className = "navbar"><NavBar switchTheme = {switchTheme} /></div>
-                <div className = "router">
-                    <Sphere />
-                    <Router />
+                <div className = "box">
+                    <div className = "sphere"><Sphere /></div>
+                    <div className = "router"><Router /></div>
                 </div>
             </div>
         </Viewport>

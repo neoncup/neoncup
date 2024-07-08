@@ -31,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "gh-pages": "^6.1.1",
+    "license-checker": "^25.0.1",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
     "styled-components": "^6.1.11",
