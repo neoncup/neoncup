@@ -71,7 +71,6 @@ export const Navbar = styled.div`
                     border-radius: 5px;
                     transition: color .3s;
                     color: var(--icon-color);
-                    background: ${ props => props.theme.colors.theme_back_color };
                     filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, .3))
                             drop-shadow(4px 4px 4px rgba(0, 0, 0, .2))
                             drop-shadow(5px 5px 5px rgba(0, 0, 0, .2));
@@ -80,7 +79,7 @@ export const Navbar = styled.div`
                         display: none;
                     }
         
-                    .icon_lua{
+                    .icon_lua {
                         position: absolute;
                         display: ${ props => props.theme.displays.lua_display };
                         top: 50%;
