@@ -25,7 +25,7 @@ export const Navbar = styled.div`
             &:nth-child(1) {
                 display: flex;
 
-                .btn_home {
+                .btn_about {
                     background: transparent;
                     border: none;
                     outline: none;
@@ -34,16 +34,20 @@ export const Navbar = styled.div`
                     display: flex;
                     align-items: center;
                     height: 40px;
+                    cursor: pointer;
     
                     .logo {
                         position: relative;
                         width: 30px;
                         height: 30px;
                         margin-right: 5px;
+
                         img {
                             position: absolute;
                             width: 100%;
                             height: 100%;
+                            rotate: 45deg;
+                            transition: all .3s;
 
                             &:nth-child(1) {
                                 display: ${ props => props.theme.displays.sol_display };
@@ -66,7 +70,14 @@ export const Navbar = styled.div`
                         justify-content: center;
                         align-items: center;
                     }
+                    
+                    &:hover {
+                        img {
+                            rotate: 0deg;
+                        }
+                    }
                 }
+                
                 .routes {
                     position: absolute;
                     top: 90px;

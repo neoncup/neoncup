@@ -22,7 +22,6 @@ const NavBar: React.FC <NavbarProps> = ({ switchTheme }) => {
     const navigate = useNavigate();
 
     /* my routes functions */
-    const buttonHome = () => { navigate('/') }
     const buttonAbout = () => { navigate('/sobre') }
     const buttonFolio = () => { navigate('/portifolio') }
     const buttonThumbrs = () => { navigate('/serviços') }
@@ -57,7 +56,7 @@ const NavBar: React.FC <NavbarProps> = ({ switchTheme }) => {
         <Navbar>
             <div className = "contain">
                 <div>
-                    <button className = "btn_home" onClick = { (event) =>{ enableButton(event); buttonHome () } }>
+                    <button className = "btn_about" onClick = { (event) =>{ enableButton(event); buttonAbout () } }>
                         <div className = "actived"></div>
                         <div className = "logo" id="m">
                             <img src = { logoLua } />

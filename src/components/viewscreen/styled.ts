@@ -10,6 +10,10 @@ export const Viewport = styled.div`
     color: ${ props => props.theme.colors.text_color_def };
     background: ${props => props.theme.colors.back_color_def};
     animation: backChange_01 .3s;
+    overflow: auto;
+
+    &::-webkit-scrollbar { width: 2px; }
+    &::-webkit-scrollbar-track { ${ props => props.theme.colors.theme_back_color }; }
 
     .router {
         position: relative;

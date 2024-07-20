@@ -30,8 +30,10 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-    
+
     body {
+        font-family: 'Poppins-def';
+
         .App {
             position: fixed;
             width: 100%;
@@ -43,6 +45,14 @@ export default createGlobalStyle`
                 border: none;
                 outline: none;
                 padding: 10px;
+            }
+
+            .title {
+                text-transform: uppercase;
+                font-family: 'Metrica';
+                letter-spacing: 2.5px;
+                font-size: 10px;
+                font-weight: normal;
             }
         }
     }
